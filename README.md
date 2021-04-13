@@ -145,9 +145,9 @@ For example you will have to run:
 
 ```shell
 # If you already built the code base with a regular composer install.
-# Then you need to remove the docroot first or the symlinks wont be
-# updated to a mirror of the files.
-rm -rf docroot/
+# Then you need to remove the docroot folders first or the symlinks wont
+# be updated to a mirror of the files.
+rm -rf docroot/modules docroot/themes docroot/profiles
 # Run composer install --no-dev with path repos set to mirrored.
 COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev
 ```
