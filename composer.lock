@@ -293,7 +293,7 @@
         },
         {
             "name": "custom/project_core",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "lib/custom/modules/project_core",
@@ -319,7 +319,7 @@
         },
         {
             "name": "custom/project_profile",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "lib/custom/profiles/project_profile",
@@ -342,7 +342,7 @@
         },
         {
             "name": "custom/project_theme",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "lib/custom/themes/project_theme",
