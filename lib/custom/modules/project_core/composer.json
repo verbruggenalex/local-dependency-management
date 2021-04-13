@@ -1,0 +1,22 @@
+{
+  "name": "custom/project_core",
+  "description": "Project core",
+  "type": "drupal-custom-module",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Alexander Verbruggen",
+      "email": "alexander.verbruggen@intracto.com"
+    }
+  ],
+  "require": {
+    "drupal/smart_date": "^3.0"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+
+  }
+}

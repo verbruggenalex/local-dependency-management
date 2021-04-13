@@ -1,0 +1,5 @@
+/vendor/
+/docroot/
+/.idea/
+/.gitattributes
+/.editorconfig

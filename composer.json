@@ -1,0 +1,85 @@
+{
+    "name": "verbruggenalex/local-dependency-management",
+    "type": "project",
+    "description": "Have Composer manage the dependencies of your custom packages.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Alexander Verbruggen",
+            "email": "alexander.verbruggen@intracto.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.10",
+        "custom/project_core": "@dev",
+        "custom/project_profile": "@dev",
+        "custom/project_theme": "@dev",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core-recommended": "^9.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "require-dev": {
+        "drupal/devel": "^4.1",
+        "ergebnis/composer-normalize": "^2.13"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "drupal/core"
+            ],
+            "locations": {
+                "web-root": "./docroot"
+            }
+        },
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": [
+                "https://www.drupal.org/files/issues/2021-01-25/1650930-103.patch"
+            ]
+        }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "local": {
+            "type": "path",
+            "url": "lib/custom/*/*"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

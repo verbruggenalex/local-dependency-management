@@ -1,0 +1,12 @@
+{
+  "name": "custom/project_profile",
+  "description": "Project theme",
+  "type": "drupal-custom-profile",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Verbruggen",
+      "email": "verbruggenalex@gmail.com"
+    }
+  ]
+}
