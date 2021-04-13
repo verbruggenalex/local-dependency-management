@@ -114,8 +114,29 @@ And put the following or similar configuration into your extra section:
 
 ### Sidenote
 
-You may need to adjust the build process if you want to have the source files inside of the docroot for deployment. For
-example you might have to run:
+You may need to adjust the build process if you want to have the source files inside of the docroot for deployment.
+Otherwise the packages will be symlinked.
+
+```shell
+root@itr01428:~/PhpstormProjects/tips$ tree -L 4 docroot/modules/ docroot/themes/ docroot/profiles/
+docroot/modules/
+├── contrib
+├── custom
+│   └── project_core -> ../../../lib/custom/modules/project_core
+└── README.txt
+docroot/themes/
+├── custom
+│   └── project_theme -> ../../../lib/custom/themes/project_theme
+└── README.txt
+docroot/profiles/
+├── custom
+│   └── project_profile -> ../../../lib/custom/profiles/project_profile
+└── README.txt
+
+```
+
+
+For example you will have to run:
 
 ```shell
 # If you already built the code base with a regular composer install.
