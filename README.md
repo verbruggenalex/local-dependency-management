@@ -111,6 +111,11 @@ And put the following or similar configuration into your extra section:
     }
 }
 ```
+Then just install them as any other package. But either allow * or @dev.
+
+```shell
+composer require custom/project_core:@dev custom/project_theme:@dev custom/project_profile:@dev
+```
 
 ### Sidenote
 
